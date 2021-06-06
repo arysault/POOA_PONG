@@ -30,6 +30,7 @@ public class Pong extends Canvas implements Runnable, KeyListener{
 	public static Player player;
 	public static Enemy enemy;
 	public static Ball ball;
+	public static int teste=0;
 	
 	//Inicializando janela
 	public Pong() {
@@ -44,6 +45,11 @@ public class Pong extends Canvas implements Runnable, KeyListener{
 	}
 	
 	public void initFrame() {
+		teste++;
+		System.out.println(teste);
+		if(teste>0 & teste<2 ) {
+			
+		
 		frame = new JFrame("Game #1");
 		frame.add(this);
 		//Não permite que o usuario altere o tamanho da janela
@@ -56,6 +62,9 @@ public class Pong extends Canvas implements Runnable, KeyListener{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//Permite a visibilidade da janela
 		frame.setVisible(true);
+		}else {
+			System.out.println("perdemo");
+		}
 	}
 	
 	public synchronized void start() {
