@@ -15,6 +15,7 @@ public class Enemy {
 		this.x = x;
 		this.y = y;
 		this.width = 40;
+	
 		this.height = 10;
 	}
 

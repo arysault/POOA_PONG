@@ -13,6 +13,8 @@ public class Ball {
 	public int width, height;
 	public double dx, dy;
 	public double speed = 1.0; 
+	public static int enimy_score=0;
+	public static int my_Score=0;
 	
 	public Ball(double x, double y) {
 		this.x = x;
@@ -34,9 +36,16 @@ public class Ball {
 		}
 		//Logica de colisão da bola eixo Y
 		if(y >= Pong.HEIGHT) {
+			
+			enimy_score++;
+			Pong.frame.setTitle("PLAYER:"+my_Score+"/IA:"+enimy_score);
 			new Pong();
+			
 			return;
 		} else if(y < 0) {
+			
+			my_Score++;
+			Pong.frame.setTitle("PLAYER:"+my_Score+"/IA:"+enimy_score);
 			new Pong();
 			return;
 		}
