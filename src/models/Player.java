@@ -17,7 +17,7 @@ public class Player implements KeyListener{
 		this.x = x;
 		this.y = y;
 		this.width = 40;
-		this.height = 10;
+		this.height = 5;
 	}
 
 	public int getX() {

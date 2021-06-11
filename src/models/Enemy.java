@@ -15,8 +15,7 @@ public class Enemy {
 		this.x = x;
 		this.y = y;
 		this.width = 40;
-	
-		this.height = 10;
+		this.height = 5;
 	}
 
 	public double getX() {
@@ -36,7 +35,7 @@ public class Enemy {
 	}
 
 	public void tick() {
-		x += (Pong.ball.x - x - 6) * 0.07;
+		x += (Pong.ball.getX() - x - 6) * 0.05;
 		//VERIFICAR COLISÃO NA TELA
 		if(x + width > Pong.WIDTH) {
 			x = Pong.WIDTH - width;

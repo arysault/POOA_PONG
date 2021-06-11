@@ -9,12 +9,12 @@ import game.Pong;
 
 public class Ball {
 	
-	public double x, y;
-	public int width, height;
-	public double dx, dy;
-	public double speed = 1.0; 
-	public static int enimy_score=0;
-	public static int my_Score=0;
+	private double x, y;
+	private int width, height;
+	private double dx, dy;
+	private double speed = 1.2; 
+	private static int enimy_score=0;
+	private static int my_Score=0;
 	
 	public Ball(double x, double y) {
 		this.x = x;
@@ -27,6 +27,42 @@ public class Ball {
 		dy = Math.sin(Math.toRadians(angle));
 	}
 	
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public double getDx() {
+		return dx;
+	}
+
+	public double getDy() {
+		return dy;
+	}
+
+	public double getSpeed() {
+		return speed;
+	}
+
+	public static int getEnimy_score() {
+		return enimy_score;
+	}
+
+	public static int getMy_Score() {
+		return my_Score;
+	}
+
 	public void tick() {
 		//Logica de colisão da bola eixo X
 		if(x+(dx*speed) + width >= Pong.WIDTH) {
