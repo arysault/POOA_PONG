@@ -51,6 +51,11 @@ public class Player implements KeyListener{
 		}
 	}
 	
+	public void render(Graphics g) {
+		g.setColor(Color.blue);
+		g.fillRect(x, y, width, height);
+	}
+	
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
@@ -68,11 +73,6 @@ public class Player implements KeyListener{
 			left = false;
 		}
 		
-	}
-	
-	public void render(Graphics g) {
-		g.setColor(Color.blue);
-		g.fillRect(x, y, width, height);
 	}
 
 	@Override
